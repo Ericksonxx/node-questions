@@ -1,0 +1,19 @@
+{
+  "name": "question2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Erick Agullo",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^10.2.0",
+    "mock-stdin": "^1.0.0",
+    "sinon": "^17.0.1"
+  }
+}
