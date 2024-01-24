@@ -1,0 +1,17 @@
+{
+  "name": "question1",
+  "version": "1.0.0",
+  "description": "palindrome",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Erick Agullo",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
