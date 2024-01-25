@@ -1,0 +1,94 @@
+.input_container {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    text-align: center;
+}
+
+input{
+    background-color: transparent;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    color-scheme: dark;
+}
+
+button {
+    height: 50px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+button:hover {
+    height: 50px;
+    background-color: rgb(238, 238, 238);
+    color: #333;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.input_clock {
+    margin-top: 50px;
+    text-align: center;
+    margin-left: auto
+}
+
+.phrase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.phrase p {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.phrase .unit {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 200;
+}
+
+.separator{
+    font-size: 3rem;
+    margin-bottom: 2rem
+}
+
+/* responsive queries */
+@media only screen and (max-width: 550px) {
+    .phrase p {
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .separator{
+        font-size: 1rem;
+        margin-bottom: 1rem
+    }
+    .phrase .unit {
+        font-size: 0.4rem;
+        text-align: center;
+        font-weight: 200;
+    }
+}
+  

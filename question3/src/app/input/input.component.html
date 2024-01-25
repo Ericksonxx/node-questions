@@ -1,0 +1,48 @@
+
+<div class="input_wrapper">
+    <div class="input_container">
+        <input (change)="onDateChange($event)" type="date" id="start" name="trip-start" value={{userDate}} min="1900/01/01" max={{currentDate}} />
+        <button (click)="onCalculation($event)" [disabled]="!isDateValid">CALCULATE</button>
+    </div>
+    <div *ngIf="!isDateValid">
+        <p class="error-message">You cannot be born in the future!</p>
+    </div>
+    <div *ngIf="aliveTime" class="input_clock">
+        <p class="title">You have been alive for...</p>
+        <div class="phrase">
+            <p>
+                {{aliveTime?.years}} 
+                <span class="unit">years</span>
+            </p>
+            <span class="separator"> : </span>
+            <p>
+                {{aliveTime?.months}} 
+                <span class="unit">months</span>
+            </p>
+            <span class="separator"> : </span>
+            <p>
+                {{aliveTime?.weeks}}
+                <span class="unit">weeks</span>
+            </p>
+            <span class="separator"> : </span>
+            <p>
+                {{aliveTime?.days}}
+                <span class="unit">days</span>
+            </p>
+            <p>
+                {{aliveTime?.hours}}
+                <span class="unit">hours</span>
+            </p>
+            <span class="separator"> : </span>
+            <p>
+                {{aliveTime?.minutes}}
+                <span class="unit">minutes</span>
+            </p>
+            <span class="separator"> : </span>
+            <p>
+                {{aliveTime?.seconds}}
+                <span class="unit">days</span>
+            </p>
+        </div>
+    </div>
+</div>
