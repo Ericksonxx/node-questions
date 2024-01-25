@@ -16,10 +16,10 @@ export class InputComponent {
   currentDate: string | null;
   userDate: string | null;
   aliveTime: Age | null;
-  isDateValid: boolean = true; // Add a flag to track date validity
+  isDateValid: boolean = true;
 
   constructor(private datePipe: DatePipe) {    
-    this.currentDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd'); // Update date format
+    this.currentDate = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
     this.userDate = this.currentDate;
     this.aliveTime = null;
   }
@@ -42,7 +42,6 @@ export class InputComponent {
     const remainingDays = differenceInDays(now, addMonths(birthdate, years * 12 + remainingMonths));
     const remainingWeeks = Math.floor(remainingDays / 7);
   
-    // Create an object to store the calculated age
     const aliveTime = {
       milliseconds,
       seconds,
@@ -54,7 +53,6 @@ export class InputComponent {
       years,
     };
   
-    // Ensure hours, minutes, and seconds are within their respective ranges
     aliveTime.hours %= 24;
     aliveTime.minutes %= 60;
     aliveTime.seconds %= 60;
@@ -81,7 +79,7 @@ export class InputComponent {
   onCalculation(event: Event): void {
     const userDateAsDate = this.userDate ? new Date(this.userDate) : null;
     
-    // Check if the input date is valid and then calculate
+    // input date is valid and then calculate
     if (userDateAsDate) {
       this.aliveTime = this.calculate(userDateAsDate);
       console.log(`Days Lived: ${this.aliveTime.days}`);
